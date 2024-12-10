@@ -1,3 +1,14 @@
+import NavBar from "../../componenets/Navbar";
+
 export default function HomePage() {
-    return <h1>Homepage</h1>;
-  }
+  return (
+    <div>
+      <header>
+        <NavBar> </NavBar>
+      </header>
+      <div className="container">
+        <h1 className="mt-5">Homepage</h1>
+      </div>
+    </div>
+  );
+}
