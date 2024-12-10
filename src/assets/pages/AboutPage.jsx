@@ -1,3 +1,10 @@
+
 export default function AboutPage() {
-    return <h1>About</h1>;
-  }
+  return (
+    
+      <div className="container">
+        <h1 className="mt-5">About</h1>
+      </div>
+   
+  );
+}
