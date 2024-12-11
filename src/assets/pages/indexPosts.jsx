@@ -35,10 +35,18 @@ export default function IndexPosts() {
           <tr key={post.id}>
             <td>{post.nome}</td>
             <td>
-              <img src={post.immagine} alt={post.nome} style={{ width: "50px" }} />
+              <img
+                src={`http://localhost:3000/${post.immagine}`}
+                alt={post.nome}
+                width="50px"
+              />
             </td>
             <td>
-              <a href={`#post-${post.id}`}>Show</a>
+              <a href={`#post-${post.id}`}>
+                <button type="button" className="btn btn-primary">
+                  <i className="fa-solid fa-eye"></i>
+                </button>
+              </a>
             </td>
           </tr>
         ))}
