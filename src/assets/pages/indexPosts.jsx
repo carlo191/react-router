@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function IndexPosts() {
   const [posts, setPosts] = useState([]);
@@ -27,7 +28,7 @@ export default function IndexPosts() {
         <tr>
           <th scope="col">Nome</th>
           <th scope="col">Immagine</th>
-          <th scope="col">Azioni</th>
+          <th scope="col">Mostra dettagli</th>
         </tr>
       </thead>
       <tbody>
@@ -43,9 +44,13 @@ export default function IndexPosts() {
             </td>
             <td>
               <a href={`#post-${post.id}`}>
-                <button type="button" className="btn btn-primary">
-                  <i className="fa-solid fa-eye"></i>
-                </button>
+                <Link
+                  to={`/posts/${post.id}`}
+                  type="button"
+                  className="btn btn-primary "
+                >
+                  <i className="fa-solid fa-eye "></i>
+                </Link>
               </a>
             </td>
           </tr>
